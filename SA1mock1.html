@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary 6 Digital Literacy SA1 Mock Exam</title>
+    <!-- Tailwind CSS for sleek, modern, Keynote-style UI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* Very light gray, minimalist */
+            color: #111827;
+            overflow-x: hidden;
+        }
+        
+        .keynote-card {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .option-btn {
+            transition: all 0.2s ease;
+            border: 2px solid #e5e7eb;
+        }
+
+        .option-btn:hover:not(:disabled) {
+            border-color: #6366f1;
+            background-color: #eef2ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .option-btn.correct {
+            background-color: #dcfce7;
+            border-color: #22c55e;
+            color: #166534;
+        }
+
+        .option-btn.incorrect {
+            background-color: #fee2e2;
+            border-color: #ef4444;
+            color: #991b1b;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .slide-up {
+            animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .pop {
+            animation: pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0.95); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Streak fire animation */
+        @keyframes flicker {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        .fire-active {
+            color: #f97316;
+            animation: flicker 1s infinite alternate;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 sm:p-8 relative pb-16">
+
+    <!-- LANDING PAGE -->
+    <div id="landing-view" class="w-full max-w-4xl mx-auto flex flex-col items-center justify-center slide-up">
+        <div class="text-center mb-10">
+            <div class="inline-block bg-indigo-100 text-indigo-700 px-4 py-1 rounded-full text-sm font-semibold tracking-wide mb-4">
+                Primary 6 SA1
+            </div>
+            <h1 class="text-5xl font-bold tracking-tight text-gray-900 mb-6">Digital Literacy Mock Exam</h1>
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                Welcome! This mock assessment will test your knowledge on the core concepts of computing and digital literacy. Prepare for a 60-question marathon!
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-12">
+            <!-- Chapter 1 -->
+            <div class="keynote-card p-8 flex flex-col items-start">
+                <div class="bg-blue-100 p-3 rounded-xl mb-4">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m14-6h2m-2 6h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Chapter 1</h3>
+                <p class="text-gray-500 font-medium mb-3">Hardware & Software</p>
+                <ul class="text-sm text-gray-400 space-y-1">
+                    <li>• CPU, RAM, & ROM</li>
+                    <li>• Motherboard & PSU</li>
+                    <li>• Programming Environments</li>
+                    <li>• Digitising Analogue Data</li>
+                </ul>
+            </div>
+            <!-- Chapter 2 -->
+            <div class="keynote-card p-8 flex flex-col items-start">
+                <div class="bg-purple-100 p-3 rounded-xl mb-4">
+                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Chapter 2</h3>
+                <p class="text-gray-500 font-medium mb-3">Enhancing a Document</p>
+                <ul class="text-sm text-gray-400 space-y-1">
+                    <li>• SmartArt Graphics</li>
+                    <li>• Hyperlinks</li>
+                    <li>• Headers, Footers, Columns</li>
+                    <li>• Cover Pages & Styles</li>
+                </ul>
+            </div>
+            <!-- Chapter 3 -->
+            <div class="keynote-card p-8 flex flex-col items-start">
+                <div class="bg-green-100 p-3 rounded-xl mb-4">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold mb-2">Chapter 3</h3>
+                <p class="text-gray-500 font-medium mb-3">Data in Spreadsheet</p>
+                <ul class="text-sm text-gray-400 space-y-1">
+                    <li>• Data Types & Functions</li>
+                    <li>• Cell Referencing</li>
+                    <li>• Charts (Bar, Line, Pie)</li>
+                    <li>• Printing Spreadsheets</li>
+                </ul>
+            </div>
+        </div>
+
+        <button onclick="startQuiz()" class="bg-gray-900 hover:bg-indigo-600 text-white text-xl font-medium py-4 px-12 rounded-full shadow-lg transition-colors duration-300 transform hover:scale-105">
+            Start SA1 Quiz
+        </button>
+    </div>
+
+    <!-- QUIZ INTERFACE -->
+    <div id="quiz-view" class="w-full max-w-3xl mx-auto hidden flex-col h-full relative">
+        
+        <!-- Progress Bar -->
+        <div class="w-full bg-gray-200 rounded-full h-1.5 mb-6">
+            <div id="progress-bar" class="bg-indigo-600 h-1.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+        </div>
+
+        <!-- Gamification HUD -->
+        <div class="flex justify-between items-center mb-6 px-2">
+            <div class="flex items-center space-x-3 bg-white px-5 py-3 rounded-full shadow-sm border border-gray-100">
+                <svg class="w-5 h-5 text-indigo-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <span class="font-bold text-gray-700">Score: <span id="score-display" class="text-indigo-600 text-xl">0</span></span>
+            </div>
+            <div class="text-sm font-semibold text-gray-400">
+                Question <span id="current-q-num">1</span> of <span id="total-q-num">60</span>
+            </div>
+            <div class="flex items-center space-x-3 bg-white px-5 py-3 rounded-full shadow-sm border border-gray-100">
+                <svg id="streak-icon" class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path></svg>
+                <span class="font-bold text-gray-700">Streak: <span id="streak-display" class="text-gray-500 text-xl">0</span></span>
+            </div>
+        </div>
+
+        <!-- Question Area -->
+        <div class="keynote-card p-10 mb-6 slide-up w-full">
+            <h2 id="question-text" class="text-2xl sm:text-3xl font-semibold text-gray-900 mb-8 leading-tight">
+                Question Text Here
+            </h2>
+            <div id="options-container" class="flex flex-col space-y-4">
+                <!-- Options injected by JS -->
+            </div>
+        </div>
+
+        <!-- Feedback & Explanation (Hidden initially) -->
+        <div id="feedback-panel" class="keynote-card p-8 mb-6 hidden w-full border-l-8">
+            <div class="flex items-center mb-4">
+                <div id="feedback-icon" class="mr-4"></div>
+                <h3 id="feedback-title" class="text-2xl font-bold">Feedback</h3>
+            </div>
+            <div id="feedback-explanation" class="text-gray-600 leading-relaxed text-lg">
+                Explanation text here.
+            </div>
+            <div class="mt-8 flex justify-end">
+                <button onclick="nextQuestion()" class="bg-gray-900 hover:bg-gray-800 text-white py-3 px-8 rounded-full font-medium shadow-md transition-all">
+                    Next Question →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- END SCREEN -->
+    <div id="end-view" class="w-full max-w-2xl mx-auto hidden flex-col items-center justify-center keynote-card p-12 text-center">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Exam Completed!</h2>
+        <p class="text-gray-500 mb-8 text-lg">You've finished the full 60-question SA1 Digital Literacy Mock Exam.</p>
+        
+        <div class="bg-indigo-50 border border-indigo-100 rounded-3xl p-8 mb-10 w-full flex flex-col items-center">
+            <div class="relative mb-4">
+                <svg class="w-24 h-24 text-indigo-500 drop-shadow-md" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd" style="display:none;" id="badge-bronze"></path></svg>
+                <svg class="w-32 h-32 text-yellow-400 drop-shadow-xl" fill="currentColor" viewBox="0 0 20 20" id="badge-gold"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path></svg>
+            </div>
+            <h3 id="badge-text" class="text-2xl font-bold text-gray-800 mb-2">Digital Master Badge</h3>
+            <div class="flex items-center space-x-2 text-indigo-600">
+                <span class="text-5xl font-black" id="final-score">0</span>
+                <span class="text-xl font-medium mt-2">Points</span>
+            </div>
+        </div>
+
+        <button onclick="location.reload()" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-3 px-8 rounded-full transition-colors mb-8">
+            Restart Exam
+        </button>
+
+        <div class="border-t border-gray-100 w-full pt-6 text-sm text-gray-400 flex flex-col items-center">
+            <span class="mb-1 uppercase tracking-widest text-xs font-semibold">Student Record</span>
+            <span>Name: ______________________</span>
+            <span>Class: ______________________</span>
+        </div>
+    </div>
+
+    <!-- CREDENTIALS FOOTER -->
+    <div class="fixed bottom-4 text-center w-full pointer-events-none">
+        <span class="text-xs text-gray-400 font-semibold tracking-wide bg-white/80 px-4 py-1 rounded-full backdrop-blur-sm border border-gray-100 shadow-sm">
+            Created by Joshua Poon
+        </span>
+    </div>
+
+    <script>
+        // --- QUIZ DATA ---
+        // 60 Questions strictly derived directly from Primary 6 Chapters 1-3 textbook material.
+        const quizData = [
+            // --- CHAPTER 1: Hardware and Software Components (20 Questions) ---
+            {
+                chapter: 1,
+                question: "Which component is known as the 'brain' of the computer that does all the thinking and calculations?",
+                options: [
+                    "Motherboard",
+                    "Central Processing Unit (CPU)",
+                    "Graphics Processing Unit (GPU)",
+                    "Hard Disk Drive (HDD)"
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook explicitly states that the Central Processing Unit (CPU) is the brain of the computer. It does all the thinking and calculations, controls everything and runs programs and apps."
+            },
+            {
+                chapter: 1,
+                question: "Which part of the CPU is responsible for doing all the calculations?",
+                options: [
+                    "Control Unit",
+                    "Arithmetic and Logic Unit (ALU)",
+                    "Memory Unit",
+                    "Power Supply Unit (PSU)"
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> According to the textbook, the CPU has three important parts. The arithmetic and logic unit (ALU) does all the calculations in the CPU."
+            },
+            {
+                chapter: 1,
+                question: "What is the role of the Control Unit in the CPU?",
+                options: [
+                    "It stores data permanently.",
+                    "It manages the work done by the CPU and works out what instructions mean.",
+                    "It cools down the computer.",
+                    "It handles all visual processing tasks."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook defines the control unit as the part that manages the work done by the CPU. It works out what the instruction means and ensures other parts of the CPU carry out the instruction."
+            },
+            {
+                chapter: 1,
+                question: "What are the key functions a CPU performs with instructions?",
+                options: [
+                    "Upload, Download, Compress, Extract",
+                    "Fetch, Decode, Execute, Store",
+                    "Click, Drag, Drop, Play",
+                    "Start, Process, Decision, Stop"
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> As outlined in the textbook's diagram, the key functions of a CPU are to fetch, decode, execute, and store instructions."
+            },
+            {
+                chapter: 1,
+                question: "What is the main circuit board that connects all the components of the computer called?",
+                options: [
+                    "Power Supply Unit",
+                    "Memory Unit",
+                    "Motherboard",
+                    "Cooling System"
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> The textbook states that the motherboard is the main circuit board that connects all the components of the computer. It allows the CPU, memory, storage, and other parts to communicate."
+            },
+            {
+                chapter: 1,
+                question: "What is the function of the Power Supply Unit (PSU)?",
+                options: [
+                    "It temporarily stores data actively being used.",
+                    "It connects the computer to the internet.",
+                    "It gives power to all the parts inside the CPU box by changing electricity into a form the computer can use.",
+                    "It processes graphics and animations."
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> The textbook explains that the PSU gives power to all the parts inside the CPU box. It changes electricity into a form that the computer can use."
+            },
+            {
+                chapter: 1,
+                question: "What happens to the data in Random Access Memory (RAM) when the power goes out?",
+                options: [
+                    "It is permanently saved to the hard drive.",
+                    "It remains exactly as it was.",
+                    "It is compressed into a zip file.",
+                    "All the data in memory is lost."
+                ],
+                correctIndex: 3,
+                explanation: "<strong>First Principles:</strong> RAM is a type of Temporary (Primary) memory. The textbook states that data in memory is kept as electrical signals. When the power goes out, all the data in memory is lost."
+            },
+            {
+                chapter: 1,
+                question: "What is Read-Only Memory (ROM) used for?",
+                options: [
+                    "It is temporary memory used for typing a document.",
+                    "It stores essential instructions for the computer to start and operate correctly.",
+                    "It prevents the computer components from overheating.",
+                    "It connects input devices to output devices."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook defines ROM as Permanent (Secondary) memory that contains important instructions that a computer needs to start and operate correctly and does not change."
+            },
+            {
+                chapter: 1,
+                question: "Which component handles all the visual processing tasks, such as creating images, videos, and animations?",
+                options: [
+                    "Arithmetic and Logic Unit (ALU)",
+                    "Graphics Processing Unit (GPU)",
+                    "Power Supply Unit (PSU)",
+                    "Motherboard"
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> According to the textbook, the GPU, or graphics card, handles all the visual processing tasks, such as creating images, videos, and animations."
+            },
+            {
+                chapter: 1,
+                question: "What do the cooling system's fans and heat sinks prevent?",
+                options: [
+                    "Data loss",
+                    "Computer components from overheating",
+                    "Viruses from entering the computer",
+                    "The motherboard from disconnecting"
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook states that the cooling system prevents the computer components from overheating by transferring away heat, ensuring it runs smoothly."
+            },
+            {
+                chapter: 1,
+                question: "Which of the following is the smallest unit of data?",
+                options: [
+                    "Byte",
+                    "Bit",
+                    "Kilobyte",
+                    "Megabyte"
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook's memory table shows that a 'Bit' is the smallest unit of data (a single binary digit, like 0 or 1)."
+            },
+            {
+                chapter: 1,
+                question: "How many bits make up 1 Byte?",
+                options: [
+                    "8 bits",
+                    "1024 bits",
+                    "2 bits",
+                    "1000 bits"
+                ],
+                correctIndex: 0,
+                explanation: "<strong>First Principles:</strong> The textbook states that a Byte is a group of 8 bits. For example, the letter 'A' is represented by the byte 01000001."
+            },
+            {
+                chapter: 1,
+                question: "How many bytes are in 1 Kilobyte (KB)?",
+                options: [
+                    "1000 bytes",
+                    "1024 bytes",
+                    "8 bytes",
+                    "1 million bytes"
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> According to the memory table in the textbook, 1 Kilobyte (KB) is exactly equal to 1024 bytes."
+            },
+            {
+                chapter: 1,
+                question: "What is 'Block-based programming'?",
+                options: [
+                    "Writing out code entirely in text form.",
+                    "Building programs by connecting blocks of code, much like putting together pieces of a puzzle.",
+                    "Designing graphics for video games.",
+                    "Typing binary numbers directly into the CPU."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook explains that block-based programming is where you build programs by connecting blocks of code, much like putting together pieces of a puzzle. It is very visual and user-friendly."
+            },
+            {
+                chapter: 1,
+                question: "Which programming environment involves writing out code in text form and requires a good understanding of programming syntax?",
+                options: [
+                    "Block-based programming",
+                    "Text-based programming",
+                    "Graphical User Interface",
+                    "SmartArt Graphics"
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook states that text-based programming involves writing out the code in text form. It is more complex and requires a good understanding of programming syntax and logic."
+            },
+            {
+                chapter: 1,
+                question: "What is 'analogue data'?",
+                options: [
+                    "Data that consists only of numbers, usually 0s and 1s.",
+                    "Data used in our daily life (like our voices) that is continuous and can take any value.",
+                    "Data that is permanently stored on a Hard Disk Drive.",
+                    "Data that has been encrypted for security."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> According to the textbook, analogue data is the data that we use in our daily life, like our voices or the sound from a radio. This data is continuous and can take any value."
+            },
+            {
+                chapter: 1,
+                question: "What does digital data look like?",
+                options: [
+                    "Continuous waves of sound.",
+                    "It consists of numbers, usually 0s and 1s, and is not continuous.",
+                    "It looks like an electrical pulse over a telephone line.",
+                    "It is text written in Python or Java."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook defines digital data as the data that computers use. It consists of numbers, usually 0s and 1s. Digital data is not continuous and has specific values."
+            },
+            {
+                chapter: 1,
+                question: "Why must a computer 'digitise' analogue data?",
+                options: [
+                    "Because computers can only store, process, and communicate digital data.",
+                    "Because analogue data takes up too much physical space on the motherboard.",
+                    "Because digitising data cools down the CPU.",
+                    "Because block-based programming cannot read text."
+                ],
+                correctIndex: 0,
+                explanation: "<strong>First Principles:</strong> The textbook explains that computers cannot read analogue data directly. They can only store, process and communicate digital data, so they must convert analogue data into digital data (digitisation)."
+            },
+            {
+                chapter: 1,
+                question: "What does a Modem do when you visit a website?",
+                options: [
+                    "It cools down the processor so it doesn't overheat.",
+                    "It permanently saves the website to your ROM.",
+                    "It changes digital requests to analogue signals, and changes analogue signals back to digital form.",
+                    "It draws flowcharts for the CPU to read."
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> The textbook diagram shows a modem changes a digital request to analogue signals to send over the internet, and changes analogue signals back to digital form for the computer."
+            },
+            {
+                chapter: 1,
+                question: "When selecting a computer, what does 'Functionality' refer to?",
+                options: [
+                    "What the computer should look like.",
+                    "How fast the processor is.",
+                    "How much you are willing to spend.",
+                    "What tasks the computer needs to perform."
+                ],
+                correctIndex: 3,
+                explanation: "<strong>First Principles:</strong> The textbook defines 'Functionality' when selecting hardware/software as asking: 'What tasks does the computer need to perform?' For example, writing essays vs. creating complex designs."
+            },
+
+            // --- CHAPTER 2: Enhancing a Document (20 Questions) ---
+            {
+                chapter: 2,
+                question: "What feature in Word allows you to add colourful lists, diagrams, and charts to turn boring text into exciting information?",
+                options: [
+                    "Hyperlinks",
+                    "SmartArt Graphics",
+                    "Columns",
+                    "Formulas"
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook explains that you can use SmartArt to add colourful lists, diagrams, and charts to turn boring text into exciting and easy-to-read information."
+            },
+            {
+                chapter: 2,
+                question: "What is a 'hyperlink'?",
+                options: [
+                    "A link that jumps from one section to another in the same document or to a different document/website.",
+                    "A program used to edit audio files.",
+                    "A graphic used to show data trends over time.",
+                    "A password used to protect a document."
+                ],
+                correctIndex: 0,
+                explanation: "<strong>First Principles:</strong> The textbook's keyword defines a hyperlink as a link that jumps from one section to another in the same document or to a different document."
+            },
+            {
+                chapter: 2,
+                question: "What are the two parts that a hyperlink usually has?",
+                options: [
+                    "A picture and a video.",
+                    "The address of the webpage (URL) and the display text.",
+                    "A header and a footer.",
+                    "A row and a column."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> According to the textbook, hyperlinks usually have two parts: the address of the webpage or the Uniform Resource Locator (URL), and the display text."
+            },
+            {
+                chapter: 2,
+                question: "How do you follow (open) a hyperlink in a Word document?",
+                options: [
+                    "Double-click it quickly.",
+                    "Highlight it and press Backspace.",
+                    "Hold the Ctrl key and click on it.",
+                    "Right-click and select 'Print'."
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> The textbook instructs that to follow a hyperlink in Word, you hold the Ctrl key and click on it. It is usually formatted as blue underlined text."
+            },
+            {
+                chapter: 2,
+                question: "What happens if you type a URL or email address into Word and press Enter or the spacebar?",
+                options: [
+                    "Word deletes the text.",
+                    "Word automatically formats them as hyperlinks.",
+                    "Word turns the text into SmartArt.",
+                    "Word splits the text into two columns."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The Tech Help section notes that Word recognises URLs and email addresses and will automatically format them as hyperlinks after you press the Enter or spacebar key."
+            },
+            {
+                chapter: 2,
+                question: "What is a 'header' in a document?",
+                options: [
+                    "Text shown at the bottom edge of the document.",
+                    "The title of a chart.",
+                    "Text shown at the top edge of the document.",
+                    "A clickable link to a website."
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> The textbook's keyword definition states that a header is text shown at the top edge of the document."
+            },
+            {
+                chapter: 2,
+                question: "What is a 'footer' in a document?",
+                options: [
+                    "Text shown at the bottom edge of the document.",
+                    "The first page of a document.",
+                    "A colourful diagram.",
+                    "Text shown at the top edge of the document."
+                ],
+                correctIndex: 0,
+                explanation: "<strong>First Principles:</strong> The textbook's keyword definition states that a footer is text shown at the bottom edge of the document."
+            },
+            {
+                chapter: 2,
+                question: "What kind of information is usually included in headers and footers?",
+                options: [
+                    "Large video files.",
+                    "Page numbers, dates, your name, and notes.",
+                    "Complex mathematical formulas.",
+                    "Malware and computer viruses."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> According to the textbook, these special sections (headers and footers) include page numbers, dates, your name, and notes. Whatever you put in there shows up on every page."
+            },
+            {
+                chapter: 2,
+                question: "How can you remove a header from your document?",
+                options: [
+                    "Click Header and choose Remove Header.",
+                    "Use the Backspace key on every page.",
+                    "Select the text and choose 'Split Cells'.",
+                    "Change the page orientation to Landscape."
+                ],
+                correctIndex: 0,
+                explanation: "<strong>First Principles:</strong> The textbook states that to remove the header, you click Header and choose Remove Header from the menu that appears."
+            },
+            {
+                chapter: 2,
+                question: "What are 'page numbers' used for in a document?",
+                options: [
+                    "They calculate the total sum of the document.",
+                    "They are markers that show which page you are on.",
+                    "They format the document into a spreadsheet.",
+                    "They act as hyperlinks to other documents."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook explains that page numbers are markers that show which page you are on in your document, typically found in the header or footer."
+            },
+            {
+                chapter: 2,
+                question: "If you need to make changes to page numbers inside the header or footer, how do you unlock that area?",
+                options: [
+                    "Highlight all the text and press Enter.",
+                    "Right-click and select 'Unlock'.",
+                    "Double-click the header or footer to unlock it.",
+                    "Save the document to the cloud."
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> The textbook instructs that if you need to make any changes, simply double-click the header or footer to unlock it."
+            },
+            {
+                chapter: 2,
+                question: "Why do newspaper articles, newsletters, and flyers often have text split into columns?",
+                options: [
+                    "Because it saves printer ink.",
+                    "Because text in columns is easier to read.",
+                    "Because it encrypts the data securely.",
+                    "Because it prevents people from copying the text."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook explains that you may notice newsletters and flyers have text in two columns because text in columns is easier to read."
+            },
+            {
+                chapter: 2,
+                question: "What is a 'cover page'?",
+                options: [
+                    "The last page of a document showing references.",
+                    "A graphic used to show parts of a whole.",
+                    "The first page of a document with important content information.",
+                    "A folder used to store digital files."
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> The textbook's keyword defines a cover page as the first page of a document with important content information. It gives a professional look."
+            },
+            {
+                chapter: 2,
+                question: "What information is typically shown on a cover page?",
+                options: [
+                    "Every single paragraph of the report.",
+                    "A long list of internet URLs.",
+                    "The title of the document, author's name, date, and image.",
+                    "A bar chart and a pie chart."
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> According to the textbook, a cover page typically shows the title of the document, the author's name, the date, and additional details like an image or contact information."
+            },
+            {
+                chapter: 2,
+                question: "Why is adding 'Styles' to a document an excellent practice?",
+                options: [
+                    "It converts analogue data to digital data.",
+                    "It ensures consistency and readability by applying a set of formatting choices.",
+                    "It translates the text into different languages.",
+                    "It automatically saves the file to the cloud."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook states that adding styles is an excellent way to ensure consistency and readability. Styles allow you to quickly apply a set of formatting choices throughout your document."
+            },
+            {
+                chapter: 2,
+                question: "How do you modify an existing style in Word?",
+                options: [
+                    "Right-click the style in the Styles group and click Modify.",
+                    "Click Insert and choose SmartArt.",
+                    "Double-click the footer.",
+                    "Press Ctrl + S."
+                ],
+                correctIndex: 0,
+                explanation: "<strong>First Principles:</strong> The Tech Help section explains that to change or modify styles, you right-click the style you want to change from the Styles group and click Modify."
+            },
+            {
+                chapter: 2,
+                question: "How can you change the colours of a SmartArt graphic?",
+                options: [
+                    "Click Change Colours in the SmartArt Design tab.",
+                    "Type the name of the new colour inside the shape.",
+                    "Right-click and select 'Edit Hyperlink'.",
+                    "Select the text and choose 'Format Cells'."
+                ],
+                correctIndex: 0,
+                explanation: "<strong>First Principles:</strong> The textbook states that to change colours, you should click Change Colours in the SmartArt Design tab and choose the colour you like."
+            },
+            {
+                chapter: 2,
+                question: "How do you resize a SmartArt graphic?",
+                options: [
+                    "Change the page orientation to Landscape.",
+                    "Click the corners of the graphic and drag to make it bigger or smaller.",
+                    "Change the zoom slider on the bottom right.",
+                    "Split the text into columns."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook instructs that to resize, you click the corners of the SmartArt graphic and drag the corners to make it bigger or smaller."
+            },
+            {
+                chapter: 2,
+                question: "If you want to link to another section inside the same document, what option should you choose in the Insert Hyperlink box?",
+                options: [
+                    "Existing File or Web Page",
+                    "Place in This Document",
+                    "Create New Document",
+                    "E-mail Address"
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook explains that to link to other sections in the same document, you should choose 'Place in This Document'. This shows a list of headings and bookmarks."
+            },
+            {
+                chapter: 2,
+                question: "Using styles like Title, Heading 1, and Heading 2 allows for easy navigation through your document using which feature?",
+                options: [
+                    "The Navigation Pane",
+                    "The Print window",
+                    "The Formula Builder",
+                    "The SmartArt Graphic box"
+                ],
+                correctIndex: 0,
+                explanation: "<strong>First Principles:</strong> The textbook tip suggests using styles like Title, Heading 1, and Heading 2 for easy navigation through your document in the Navigation Pane."
+            },
+
+            // --- CHAPTER 3: Data Handling and Analysis in Spreadsheet (20 Questions) ---
+            {
+                chapter: 3,
+                question: "In Excel, what type of data includes names, places, or information that does NOT involve numbers for calculations?",
+                options: [
+                    "Number",
+                    "Currency",
+                    "Text",
+                    "Formula"
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> According to the data types table, 'Text' data can be names, places, or any other information that does not involve numbers for calculations (like Book, Item, or School)."
+            },
+            {
+                chapter: 3,
+                question: "Which data type includes a specific symbol and decimal places, and is used for accuracy of money calculations?",
+                options: [
+                    "Text",
+                    "Date and Time",
+                    "Formula",
+                    "Currency"
+                ],
+                correctIndex: 3,
+                explanation: "<strong>First Principles:</strong> The textbook defines 'Currency' data as including a specific currency symbol and decimal places for cents. It is used for accuracy of money calculations."
+            },
+            {
+                chapter: 3,
+                question: "What must a Formula in Excel always start with?",
+                options: [
+                    "A dollar sign ($)",
+                    "A hashtag (#)",
+                    "An equal sign (=)",
+                    "A capital letter"
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> The textbook states that a Formula contains specific instructions for calculations and always starts with an equal sign (=)."
+            },
+            {
+                chapter: 3,
+                question: "What does the SUM function do in Excel?",
+                options: [
+                    "Counts how many numbers there are in a range.",
+                    "Finds the smallest number.",
+                    "Calculates the average.",
+                    "Adds all the numbers in a range of cells."
+                ],
+                correctIndex: 3,
+                explanation: "<strong>First Principles:</strong> The functions table in the textbook defines the SUM function as one that adds all the numbers in a range of cells."
+            },
+            {
+                chapter: 3,
+                question: "Which Excel function counts how many numbers there are in a range of cells?",
+                options: [
+                    "AVG",
+                    "COUNT",
+                    "MIN",
+                    "SUM"
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> According to the textbook, the COUNT function counts how many numbers there are in a range of cells."
+            },
+            {
+                chapter: 3,
+                question: "Which Excel function finds the greatest number in a range of cells?",
+                options: [
+                    "MAX",
+                    "MIN",
+                    "AVG",
+                    "COUNT"
+                ],
+                correctIndex: 0,
+                explanation: "<strong>First Principles:</strong> The textbook states that the MAX function finds the greatest number in a range of cells."
+            },
+            {
+                chapter: 3,
+                question: "What does the error message `#DIV/0!` mean in Excel?",
+                options: [
+                    "The formula refers to a cell that is not valid.",
+                    "The formula has the wrong type of argument.",
+                    "It happens when a number is divided by zero.",
+                    "The text is not recognised in a formula."
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> The textbook's error message table explains that `#DIV/0!` happens when a number is divided by zero (e.g., `=1/0`)."
+            },
+            {
+                chapter: 3,
+                question: "What does the error message `#REF!` mean in Excel?",
+                options: [
+                    "A number is divided by zero.",
+                    "It appears if a formula refers to a cell that is not valid (e.g., a cell was deleted).",
+                    "No value is available.",
+                    "The formula starts with a text instead of a number."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The error message table states that `#REF!` appears if a formula refers to a cell that is not valid (for example, if a referenced cell was deleted)."
+            },
+            {
+                chapter: 3,
+                question: "Which type of cell reference changes and updates automatically when the formula is copied to a new cell?",
+                options: [
+                    "Absolute cell reference",
+                    "Mixed cell reference",
+                    "Relative cell reference",
+                    "Fixed cell reference"
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> The textbook defines a 'Relative cell reference' as one that recognises the change in a basic cell and automatically updates the formula of its referenced cell when copied."
+            },
+            {
+                chapter: 3,
+                question: "If you want a cell reference to stay exactly the same no matter where the formula is copied, what should you use?",
+                options: [
+                    "An absolute cell reference using a dollar sign ($).",
+                    "A relative cell reference.",
+                    "The SUM function.",
+                    "A hyperlink."
+                ],
+                correctIndex: 0,
+                explanation: "<strong>First Principles:</strong> The textbook defines an 'Absolute cell reference' as one that keeps the reference to a basic cell the same no matter where it is moved or copied. You use a dollar sign ($) to make it absolute."
+            },
+            {
+                chapter: 3,
+                question: "What does a 'mixed cell reference' do?",
+                options: [
+                    "It randomly selects a cell to reference.",
+                    "It changes both the row and column automatically.",
+                    "It is a combination where either the row or the column is fixed.",
+                    "It turns text into numbers."
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> According to the textbook, a 'Mixed cell reference' is a combination of relative and absolute references, where either the row or the column is fixed."
+            },
+            {
+                chapter: 3,
+                question: "What does the Excel function `=TODAY()` do?",
+                options: [
+                    "Shows the current date and time.",
+                    "Shows the date for tomorrow.",
+                    "Shows the current date (it does not show time).",
+                    "Calculates the number of days in a month."
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> The textbook's date and time table states that `=TODAY()` shows the date for today (current date). It does not show time."
+            },
+            {
+                chapter: 3,
+                question: "Which function should you use if you want to show both the current date AND the current time?",
+                options: [
+                    "=TODAY()",
+                    "=TIME()",
+                    "=DATE()",
+                    "=NOW()"
+                ],
+                correctIndex: 3,
+                explanation: "<strong>First Principles:</strong> The textbook explains that the `=NOW()` function shows the current date and time."
+            },
+            {
+                chapter: 3,
+                question: "Which type of chart is useful for comparing quantities using horizontal bars?",
+                options: [
+                    "Column Chart",
+                    "Pie Chart",
+                    "Line Chart",
+                    "Bar Chart"
+                ],
+                correctIndex: 3,
+                explanation: "<strong>First Principles:</strong> According to the chart table, a Bar Chart shows data with horizontal bars and is useful for comparing quantities."
+            },
+            {
+                chapter: 3,
+                question: "Which type of chart is best for showing trends over time by connecting data points with a line?",
+                options: [
+                    "Pie Chart",
+                    "Line Chart",
+                    "Column Chart",
+                    "Bar Chart"
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook states that a Line Chart connects data points with a line and is best for showing trends over time."
+            },
+            {
+                chapter: 3,
+                question: "Which chart is great for displaying proportions by showing parts of a whole as slices?",
+                options: [
+                    "Bar Chart",
+                    "Column Chart",
+                    "Pie Chart",
+                    "Line Chart"
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> The chart table explains that a Pie Chart shows parts of a whole as slices and is great for displaying proportions."
+            },
+            {
+                chapter: 3,
+                question: "In a chart, what does the vertical axis (y-axis) usually represent?",
+                options: [
+                    "The categories being compared.",
+                    "The heading of the chart.",
+                    "What each colour represents.",
+                    "The range of values for the data points."
+                ],
+                correctIndex: 3,
+                explanation: "<strong>First Principles:</strong> The textbook states that the vertical axis (y-axis) runs up and down along the left side of most charts and usually represents the range of values for the data points."
+            },
+            {
+                chapter: 3,
+                question: "In a chart, what is a 'Legend'?",
+                options: [
+                    "The title at the top of the chart.",
+                    "A guide that shows what each colour, symbol, or line style represents.",
+                    "The vertical axis.",
+                    "The horizontal axis."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook defines a Legend as a guide that shows what each colour, symbol, or line style represents in a chart."
+            },
+            {
+                chapter: 3,
+                question: "When you want to print a spreadsheet, which option allows you to choose between printing vertically or horizontally?",
+                options: [
+                    "Margins",
+                    "Copies",
+                    "Orientation (Portrait or Landscape)",
+                    "Print Active Sheets"
+                ],
+                correctIndex: 2,
+                explanation: "<strong>First Principles:</strong> Under the printing steps, the textbook states that 'Orientation' allows you to choose between Portrait (vertical) or Landscape (horizontal)."
+            },
+            {
+                chapter: 3,
+                question: "Why do we use 'Margins' when setting up a spreadsheet for printing?",
+                options: [
+                    "To change the currency symbol.",
+                    "To set margins to ensure the content is well-aligned within the print area.",
+                    "To calculate the average sum of the page.",
+                    "To change the colour of a Pie Chart."
+                ],
+                correctIndex: 1,
+                explanation: "<strong>First Principles:</strong> The textbook explains that you set Margins to ensure the content is well-aligned within the print area before clicking Print."
+            }
+        ];
+
+        // --- STATE VARIABLES ---
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let streak = 0;
+        let hasAnsweredCurrent = false;
+
+        const POINTS_PER_Q = 100;
+        const STREAK_BONUS = 50;
+
+        // --- DOM ELEMENTS ---
+        const landingView = document.getElementById('landing-view');
+        const quizView = document.getElementById('quiz-view');
+        const endView = document.getElementById('end-view');
+        
+        const qNumDisplay = document.getElementById('current-q-num');
+        const totalQDisplay = document.getElementById('total-q-num');
+        const scoreDisplay = document.getElementById('score-display');
+        const streakDisplay = document.getElementById('streak-display');
+        const streakIcon = document.getElementById('streak-icon');
+        
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        
+        const feedbackPanel = document.getElementById('feedback-panel');
+        const feedbackIcon = document.getElementById('feedback-icon');
+        const feedbackTitle = document.getElementById('feedback-title');
+        const feedbackExplanation = document.getElementById('feedback-explanation');
+        
+        const progressBar = document.getElementById('progress-bar');
+
+        // --- FUNCTIONS ---
+        
+        function init() {
+            totalQDisplay.textContent = quizData.length;
+        }
+
+        function startQuiz() {
+            landingView.classList.add('hidden');
+            quizView.classList.remove('hidden');
+            quizView.classList.add('fade-in');
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            hasAnsweredCurrent = false;
+            const q = quizData[currentQuestionIndex];
+            
+            // Update UI Counters & Progress Bar
+            qNumDisplay.textContent = currentQuestionIndex + 1;
+            const progressPercentage = (currentQuestionIndex / quizData.length) * 100;
+            progressBar.style.width = `${progressPercentage}%`;
+            
+            // Set Question Text
+            questionText.textContent = q.question;
+            
+            // Clear previous options & feedback
+            optionsContainer.innerHTML = '';
+            feedbackPanel.classList.add('hidden');
+            feedbackPanel.classList.remove('pop');
+
+            // Generate Option Buttons
+            q.options.forEach((optText, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn w-full text-left p-5 rounded-xl font-medium text-gray-700 bg-white shadow-sm';
+                
+                // Add letter prefix (A, B, C, D)
+                const letter = String.fromCharCode(65 + index);
+                btn.innerHTML = `<span class="inline-block bg-gray-100 text-gray-600 rounded w-8 h-8 text-center leading-8 mr-3 font-bold">${letter}</span> ${optText}`;
+                
+                btn.onclick = () => handleAnswer(index, btn);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function handleAnswer(selectedIndex, selectedBtn) {
+            if (hasAnsweredCurrent) return;
+            hasAnsweredCurrent = true;
+
+            const q = quizData[currentQuestionIndex];
+            const isCorrect = (selectedIndex === q.correctIndex);
+            
+            // Disable all buttons
+            const allBtns = optionsContainer.querySelectorAll('button');
+            allBtns.forEach((btn, idx) => {
+                btn.disabled = true;
+                btn.classList.remove('hover:bg-eef2ff', 'cursor-pointer');
+                
+                // Highlight correct answer
+                if (idx === q.correctIndex) {
+                    btn.classList.add('correct');
+                } else if (idx === selectedIndex && !isCorrect) {
+                    // Highlight selected wrong answer
+                    btn.classList.add('incorrect');
+                } else {
+                    btn.classList.add('opacity-50');
+                }
+            });
+
+            // Handle Gamification Logic
+            if (isCorrect) {
+                streak++;
+                let pointsEarned = POINTS_PER_Q;
+                if (streak > 1) {
+                    pointsEarned += (streak - 1) * STREAK_BONUS;
+                }
+                score += pointsEarned;
+                animateScore(score);
+                updateStreakUI();
+                showFeedback(true, q.explanation, pointsEarned);
+            } else {
+                streak = 0;
+                updateStreakUI();
+                showFeedback(false, q.explanation, 0);
+            }
+        }
+
+        function animateScore(newScore) {
+            scoreDisplay.textContent = newScore;
+            scoreDisplay.classList.add('pop');
+            setTimeout(() => scoreDisplay.classList.remove('pop'), 400);
+        }
+
+        function updateStreakUI() {
+            streakDisplay.textContent = streak;
+            if (streak >= 3) {
+                streakIcon.classList.add('fire-active');
+                streakIcon.classList.remove('text-gray-400');
+            } else {
+                streakIcon.classList.remove('fire-active');
+                streakIcon.classList.add('text-gray-400');
+            }
+            streakDisplay.classList.add('pop');
+            setTimeout(() => streakDisplay.classList.remove('pop'), 400);
+        }
+
+        function showFeedback(isCorrect, explanation, points) {
+            feedbackPanel.classList.remove('hidden');
+            feedbackPanel.classList.add('pop');
+            
+            if (isCorrect) {
+                feedbackPanel.classList.remove('border-red-500');
+                feedbackPanel.classList.add('border-green-500', 'bg-green-50');
+                feedbackIcon.innerHTML = `<svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
+                let pointsText = `+${POINTS_PER_Q} points`;
+                if (streak > 1) pointsText += ` (+${(streak-1)*STREAK_BONUS} Streak Bonus!)`;
+                feedbackTitle.innerHTML = `Correct! <span class="text-sm font-normal text-green-700 ml-2">${pointsText}</span>`;
+                feedbackTitle.className = 'text-2xl font-bold text-green-800';
+            } else {
+                feedbackPanel.classList.remove('border-green-500', 'bg-green-50');
+                feedbackPanel.classList.add('border-red-500', 'bg-red-50');
+                feedbackIcon.innerHTML = `<svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
+                feedbackTitle.textContent = 'Incorrect';
+                feedbackTitle.className = 'text-2xl font-bold text-red-800';
+            }
+
+            feedbackExplanation.innerHTML = explanation;
+            
+            // Scroll to bottom smoothly so user sees explanation
+            setTimeout(() => {
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            }, 100);
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizData.length) {
+                loadQuestion();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                // Ensure progress bar completes
+                progressBar.style.width = '100%';
+                showEndScreen();
+            }
+        }
+
+        function showEndScreen() {
+            quizView.classList.add('hidden');
+            endView.classList.remove('hidden');
+            endView.classList.add('fade-in');
+            
+            document.getElementById('final-score').textContent = score;
+
+            // Simple Badge logic based on percentage
+            const maxBase = quizData.length * POINTS_PER_Q; 
+            const badgeText = document.getElementById('badge-text');
+            const goldBadge = document.getElementById('badge-gold');
+            
+            if (score >= maxBase * 0.8) {
+                badgeText.textContent = "Digital Master Badge";
+                goldBadge.classList.add('text-yellow-400');
+            } else if (score >= maxBase * 0.5) {
+                badgeText.textContent = "Digital Explorer Badge";
+                goldBadge.classList.remove('text-yellow-400');
+                goldBadge.classList.add('text-gray-400'); // Silver
+            } else {
+                badgeText.textContent = "Digital Beginner Badge";
+                goldBadge.classList.remove('text-yellow-400');
+                goldBadge.classList.add('text-amber-700'); // Bronze
+            }
+        }
+
+        // Initialize App
+        window.onload = init;
+    </script>
+</body>
+</html>
